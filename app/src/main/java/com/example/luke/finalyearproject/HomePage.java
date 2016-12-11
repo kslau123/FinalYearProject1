@@ -2,6 +2,7 @@ package com.example.luke.finalyearproject;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.Fragment;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -19,10 +20,13 @@ import android.widget.Toast;
 
 public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle toggle;
-    private NavigationView nav_view;
-    private SessionSaver sessionSaver;
+    DrawerLayout drawerLayout;
+    ActionBarDrawerToggle toggle;
+    NavigationView nav_view;
+    SessionSaver sessionSaver;
+    Connector connector;
+    String url_add;
+    Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,9 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         setContentView(R.layout.activity_home_page);
 
         sessionSaver.checkLogin();
+
+        connector.setDbfile("");
+        url_add = connector.getUrl();
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.Open, R.string.Close);
@@ -116,6 +123,11 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         dialog.show();
     }
 
+    @Override
+    public void setTitle(CharSequence title) {
+        CharSequence ctittle = title;
+        getActionBar().setTitle(ctittle);
+    }
 }
 
 

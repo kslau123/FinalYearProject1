@@ -10,4 +10,97 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.luke.finalyearproject.Change_PW">
 
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tableRow"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tableRow1"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:text="New_Password"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/textView5"
+            android:textSize="18sp"
+            android:gravity="center"/>
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edchnpw"
+            android:layout_marginLeft="29dp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" >
+
+        <TextView
+            android:text="Old_ Password"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/textView8"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edchopw"
+            android:layout_marginLeft="33dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/tableRow2"
+        android:layout_below="@+id/tableRow1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:text="Confirm_Passowrd"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/textView6"
+            android:textSize="18sp"
+            android:gravity="center"/>
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edchconpw" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tableRow2"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_chreset"
+            android:layout_marginLeft="85dp" />
+
+        <Button
+            android:text="Apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_chapply" />
+    </TableRow>
 </RelativeLayout>

@@ -28,6 +28,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
+////////////////////////////////////////////////////
+////OLD////////////////////////////////////////////
+////////////////////////////////////////////////////
+
+
 public class RegisterDetail extends DialogFragment {
 //
 //    //Connection path
@@ -40,7 +46,7 @@ public class RegisterDetail extends DialogFragment {
     TextView txtusername, txtpassword, txtcon_password, txtemail, txtcontact;
     Button btnback, btnsummit;
     String username, password, con_password, email, contact = null;
-
+    Connector connector;
     String url_add;
 
     @Nullable
@@ -50,8 +56,8 @@ public class RegisterDetail extends DialogFragment {
         getDialog().setTitle("Confirm_Your_Input");
 
         //Set Connection file
-        Connector.setDbfile("register.php");
-        url_add = Connector.url_add;
+        connector.setDbfile("register.php");
+        url_add = connector.url_add;
 
         txtusername = (TextView) view.findViewById(R.id.txtusername);
         txtpassword = (TextView) view.findViewById(R.id.txtpassword);
@@ -59,12 +65,13 @@ public class RegisterDetail extends DialogFragment {
         txtemail = (TextView) view.findViewById(R.id.txtemail);
         txtcontact = (TextView) view.findViewById(R.id.txtcontact);
 
+        /*
         username = getActivity().getIntent().getStringExtra("username");
         password = getActivity().getIntent().getStringExtra("password");
         con_password = getActivity().getIntent().getStringExtra("con_password");
         email = getActivity().getIntent().getStringExtra("email");
         contact = getActivity().getIntent().getStringExtra("contact");
-
+*/
         txtusername.setText(username);
         txtpassword.setText(password);
         txtcon_password.setText(con_password);

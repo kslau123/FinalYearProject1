@@ -125,15 +125,14 @@ public class RegisterActivity extends FragmentActivity {
 
 
     private class Reg extends AsyncTask<String, String, String> {
-        Context c;
-        String address;
-        Button btnregi;
+        private final Context c;
+        private final String address;
+        private final Button btnregi;
         ProgressDialog pd;
-        //String Username, Password, Con_password, Email, Contact = null;
         Boolean is_success = false;
 
 
-        public Reg(Context c, String address, Button btnregi) {
+        private Reg(Context c, String address, Button btnregi) {
             this.c = c;
             this.address = address;
             this.btnregi = btnregi;

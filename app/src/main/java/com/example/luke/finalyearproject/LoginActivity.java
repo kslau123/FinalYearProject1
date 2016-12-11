@@ -38,8 +38,8 @@ public class LoginActivity extends Activity {
 //    String folder = "android/FYP";
 //    String file = "checklogin.php";
 //    final String url_add = "http://" + ip + "/" + folder + "/" + file;
-
-    String url_add;
+    Connector connector;
+    public String url_add;
 
     private  Button btnlogin, btnreglogin;
     private EditText edittxtuser, edittxtpw;
@@ -56,8 +56,8 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         //Set Connection file
-        Connector.setDbfile("checklogin.php");
-        url_add = Connector.getUrl();
+        connector.setDbfile("checklogin.php");
+        url_add = connector.getUrl();
 
         sessionSaver = new SessionSaver(getApplicationContext());
 
@@ -121,15 +121,15 @@ public class LoginActivity extends Activity {
     }
     private class Login extends AsyncTask<String, String, String> {
 
-        Context c;
-        String address;
-        Button btnlogin;
+        private final Context c;
+        private final String address;
+        private final Button btnlogin;
         ProgressDialog pd;
         String Username, User_id;
-        Boolean isSuccess;
+        Boolean isSuccess = false;
 
 
-        public Login(Context c, String address, Button btnlogin) {
+        private Login(Context c, String address, Button btnlogin) {
             this.c = c;
             this.address = address;
             this.btnlogin = btnlogin;
@@ -183,7 +183,6 @@ public class LoginActivity extends Activity {
         protected void onPostExecute(String joResult) {
             super.onPostExecute(joResult);
             pd.dismiss();
-            //    String error =null;
             try {
                 JSONArray ja = new JSONArray(joResult);
                 for (int i = 0; i < ja.length(); i++) {
@@ -191,11 +190,10 @@ public class LoginActivity extends Activity {
                     jo = ja.getJSONObject(i);
                     //   JSONObject userdata = jo.getJSONObject("userdata");
                     Username = jo.getString("username");
-                    //Password = jo.getString("password");
                     isSuccess = jo.getBoolean("is_success");
+                    User_id = jo.getString("user_id");
 
                 }
-                //       Email = userdata.getString("Email_address");
             } catch (JSONException e) {
                 e.printStackTrace();
             }
