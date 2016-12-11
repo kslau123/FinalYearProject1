@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.luke.finalyearproject.UserInfo"
+    tools:showIn="@layout/activity_user_info">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="3000dp">
+
+        <TextView
+            android:id="@+id/txtage"
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:lines="@android:integer/status_bar_notification_info_maxnum"
+            android:text="Age"
+            android:textColorLink="?attr/colorAccent"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tvnumage"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/txtage"
+            android:gravity="right|center_vertical"
+            android:text="year-old"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txtcurwei"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Target Weight"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtactlvl"
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txtlbs"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Activity Level"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtlbs"
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView12"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Weekly Goal"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtcurwei"
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txtheight"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Current Weight"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/editage">
+
+            <RadioButton
+                android:id="@+id/radmale"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radfemale"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="Female" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtgender"
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editage"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Gender"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtheight"
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txtgender"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Height"
+            android:textSize="18sp" />
+
+
+        <RadioGroup
+            android:id="@+id/groupactivitylvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wkgoalspin"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="14dp"
+            android:divider="@android:color/holo_blue_bright">
+
+            <RadioButton
+                android:id="@+id/radlow"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="Low Level" />
+
+            <RadioButton
+                android:id="@+id/radmed"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="Medium Level" />
+
+            <RadioButton
+                android:id="@+id/radhigh"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="High Level" />
+
+            <RadioButton
+                android:id="@+id/radexhigh"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="Extreme High Level" />
+
+        </RadioGroup>
+
+        <Spinner
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/wkgoalspin"
+            android:layout_above="@+id/txtactlvl"
+            android:layout_alignStart="@+id/groupactivitylvl" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/summitbtn"
+            android:text="Summit"
+            android:layout_below="@+id/groupactivitylvl"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="43dp"
+            android:layout_height="60dp" />
+
+        <EditText
+            android:id="@+id/edittarwei"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:inputType="number"
+            android:text="3"
+            android:textSize="24sp"
+            android:layout_alignBaseline="@+id/textView16"
+            android:layout_alignBottom="@+id/textView16"
+            android:layout_alignStart="@+id/wkgoalspin" />
+
+        <TextView
+            android:id="@+id/tvnumcurwei"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:gravity="right|center_vertical"
+            android:text="lbs"
+            android:textSize="24sp"
+            android:layout_alignBaseline="@+id/editcuwei"
+            android:layout_alignBottom="@+id/editcuwei"
+            android:layout_toEndOf="@+id/editcuwei" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:gravity="right|center_vertical"
+            android:text="lbs"
+            android:textSize="24sp"
+            android:layout_alignTop="@+id/textView12"
+            android:layout_toEndOf="@+id/edittarwei" />
+
+        <EditText
+            android:id="@+id/editheight"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:inputType="number"
+            android:text="170"
+            android:textSize="24sp"
+            android:layout_alignBaseline="@+id/txtcm"
+            android:layout_alignBottom="@+id/txtcm"
+            android:layout_alignStart="@+id/editcuwei" />
+
+        <TextView
+            android:id="@+id/txtcm"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:gravity="right|center_vertical"
+            android:text="cm"
+            android:textSize="24sp"
+            android:layout_alignTop="@+id/txtheight"
+            android:layout_toEndOf="@+id/editheight" />
+
+        <EditText
+            android:id="@+id/editage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:inputType="number"
+            android:text="1"
+            android:textSize="24sp"
+            android:layout_alignBaseline="@+id/tvnumage"
+            android:layout_alignBottom="@+id/tvnumage"
+            android:layout_toStartOf="@+id/tvnumage" />
+
+        <EditText
+            android:id="@+id/editcuwei"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:inputType="number"
+            android:text="2"
+            android:textSize="24sp"
+            android:layout_alignBaseline="@+id/txtcurwei"
+            android:layout_alignBottom="@+id/txtcurwei"
+            android:layout_alignStart="@+id/edittarwei" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

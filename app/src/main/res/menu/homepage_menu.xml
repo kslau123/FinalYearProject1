@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_activity_home_page"
+        android:title="Home Page"></item>
+    <item android:id="@+id/menu_activity_userinfo"
+        android:title="User Info"></item>
+    <item android:id="@+id/menu_activity_calories_counter"
+        android:title="Calories Counter"></item>
+    <item android:id="@+id/menu_activity_report"
+        android:title="Report"></item>
+    <item android:id="@+id/menu_activity_setting"
+        android:title="Setting"></item>
+    <item android:id="@+id/menu_activity_logout"
+        android:title="Logout"></item>
+</menu>

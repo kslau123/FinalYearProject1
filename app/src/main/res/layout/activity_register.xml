@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.luke.finalyearproject.RegisterActivity">
+
+    <EditText
+        android:id="@+id/edittxtreguser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="UserName"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignTop="@+id/Username"
+        android:layout_toEndOf="@+id/Username"
+        android:text="123" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="30sp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/Username"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="14dp"
+        android:text="Username : "
+        android:textSize="24sp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/edittxtregpw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_below="@+id/edittxtreguser"
+        android:layout_toEndOf="@+id/Password"
+        android:layout_marginTop="16dp"
+        android:text="123" />
+
+    <TextView
+        android:id="@+id/Password"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:text="Password : "
+        android:textSize="24sp"
+        android:layout_alignTop="@+id/edittxtregpw"
+        android:layout_toStartOf="@+id/editregconfirmpw" />
+
+    <EditText
+        android:id="@+id/edittxtcontact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="123"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/edittxtregemail"
+        android:layout_alignStart="@+id/edittxtregemail" />
+
+
+    <TextView
+        android:id="@+id/Contact"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:text="Contact :"
+        android:textSize="24sp"
+        android:layout_alignBaseline="@+id/edittxtcontact"
+        android:layout_alignBottom="@+id/edittxtcontact"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:text="Email :"
+        android:textSize="24sp"
+        android:layout_below="@+id/editregconfirmpw"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="44dp" />
+
+    <EditText
+        android:id="@+id/edittxtregemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="123"
+        android:layout_alignBaseline="@+id/Email"
+        android:layout_alignBottom="@+id/Email"
+        android:layout_toEndOf="@+id/Email" />
+
+    <TextView
+        android:id="@+id/ConfirmPassword"
+        android:layout_width="125dp"
+        android:layout_height="60dp"
+        android:text="Confirm Password:"
+        android:textSize="24sp"
+        android:layout_alignTop="@+id/editregconfirmpw"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editregconfirmpw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_marginTop="25dp"
+        android:text="123"
+        android:layout_below="@+id/edittxtregpw"
+        android:layout_toEndOf="@+id/ConfirmPassword" />
+
+    <Button
+        android:id="@+id/btnregnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_below="@+id/edittxtcontact"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp" />
+</RelativeLayout>
